@@ -1,0 +1,7 @@
+- Map/Geo-tagging:
+  - Integrate Leaflet for map visualization in project progress modules.
+  - Show markers from geo-tagged inspection images (EXIF extraction handled in backend).
+- Auth:
+  - Replace stubs with real backend endpoints once available; ensure /auth/login returns { user, token }.
+- UI:
+  - Add breadcrumbs, notifications, and better table sorting/pagination as needed.

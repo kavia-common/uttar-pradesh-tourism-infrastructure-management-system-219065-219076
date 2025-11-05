@@ -1,0 +1,33 @@
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">
+      <span>UPSTDC</span>
+    </div>
+    <nav>
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/users" routerLinkActive="active">Users</a>
+      <a routerLink="/projects" routerLinkActive="active">Projects</a>
+      <a routerLink="/tenders" routerLinkActive="active">Tenders</a>
+      <a routerLink="/contractors" routerLinkActive="active">Contractors</a>
+      <a routerLink="/funds" routerLinkActive="active">Funds</a>
+      <a routerLink="/milestones" routerLinkActive="active">Milestones</a>
+      <a routerLink="/inspections" routerLinkActive="active">Inspections</a>
+      <a routerLink="/handover" routerLinkActive="active">Handover</a>
+      <a routerLink="/payments" routerLinkActive="active">Payments</a>
+      <a routerLink="/reports" routerLinkActive="active">Reports</a>
+      <a routerLink="/training" routerLinkActive="active">Training</a>
+    </nav>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <div class="title">Uttar Pradesh Tourism Infrastructure</div>
+      <div class="actions">
+        <span *ngIf="auth.isAuthenticated()">Hello, {{ auth.currentUser()?.name || 'User' }}</span>
+        <button *ngIf="auth.isAuthenticated()" (click)="logout()">Logout</button>
+      </div>
+    </header>
+    <section class="content">
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+</div>
